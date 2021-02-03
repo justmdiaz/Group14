@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
 
             tempRigidbody.AddForce(transform.forward * projectileSpeed);
 
-            Destroy(tempProjectileHandler, 10f);
+            Destroy(tempProjectileHandler, 3f);
        } 
     }
 

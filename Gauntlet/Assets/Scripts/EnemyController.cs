@@ -10,11 +10,13 @@ public class EnemyController : MonoBehaviour
     int MoveSpeed = 4;
     int MaxDist = 10;
     int MinDist = 0;
+    int numTimesHit;
  
  
     void Start()
     {
-        Player = GameObject.Find("Player").transform;
+        Player = GameObject.FindWithTag("Player").transform;
+        numTimesHit = 0;
     }
  
      void FixedUpdate()
@@ -34,6 +36,19 @@ public class EnemyController : MonoBehaviour
              }
  
          }
+     }
+
+     void OnCollisionEnter(Collision collided)
+     {
+        if(collided.gameObject.tag == "Projectile")
+        {
+            numTimesHit += 1;
+
+            if(numTimesHit >= 1)
+            {
+                Destroy(this.gameObject);
+            }
+        }
      }
 
 }
