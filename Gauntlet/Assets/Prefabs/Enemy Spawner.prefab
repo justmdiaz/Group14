@@ -109,6 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbf9b4b39fe9ea44a6deb740187a681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabToSpawn: {fileID: 919132149155446097, guid: af7b040a1dc955244954bf612978904f, type: 3}
+  prefabToSpawn: {fileID: 1891184502766078101, guid: 5c250dc20550b22478b15022dc3eddbc, type: 3}
   spawnTime: 3
   spawnTimeRandom: 1

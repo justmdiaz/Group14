@@ -4,27 +4,36 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    Rigidbody rigidbody;
+    public GameObject projectileEmitter;
+    public GameObject prefabToSpawn;
+    public float projectileSpeed;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       if(Input.GetKeyDown("space"))
+       {
+           GameObject tempProjectileHandler;
+           tempProjectileHandler = Instantiate(prefabToSpawn, projectileEmitter.transform.position, projectileEmitter.transform.rotation) as GameObject;
+
+            tempProjectileHandler.transform.Rotate(Vector3.left * 90);
+
+            Rigidbody tempRigidbody;
+            tempRigidbody = tempProjectileHandler.GetComponent<Rigidbody>();
+
+            tempRigidbody.AddForce(transform.forward * projectileSpeed);
+
+            Destroy(tempProjectileHandler, 10f);
+       } 
     }
 
-    public void Launch(Vector2 direction, float force)
-    {
-        rigidbody.AddForce(direction * force);
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        
-    }
+    
 }
+
+    

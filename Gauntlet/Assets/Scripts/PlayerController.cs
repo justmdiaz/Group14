@@ -9,8 +9,7 @@ public class PlayerController : MonoBehaviour
     float moveHorizontal;
     float moveVertical;
     public float speed = 6f;
-    public float projectileSpeed = 1000f;
-    public GameObject projectilePrefab;
+    
 
 
     // Start is called before the first frame update
@@ -36,18 +35,6 @@ public class PlayerController : MonoBehaviour
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
         //
 
-        //Launching Projectiles
-         if(Input.GetKeyDown("space"))
-         {
-             LaunchProjectile();
-         }
-
     }
 
-    void LaunchProjectile()
-    {
-        GameObject projectileObject = Instantiate(projectilePrefab, transform.position, Quaternion.identity) as GameObject;
-        Rigidbody projectileObjectRigidbody = projectileObject.GetComponent<Rigidbody>();
-        projectileObjectRigidbody.AddForce(Vector3.forward * projectileSpeed);
-    }
 }
