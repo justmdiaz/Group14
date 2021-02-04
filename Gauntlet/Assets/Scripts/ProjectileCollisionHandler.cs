@@ -20,9 +20,6 @@ public class ProjectileCollisionHandler : MonoBehaviour
 
     void OnCollisionEnter(Collision collided)
     {
-        if(collided.gameObject.tag == "Enemy")
-        {
-            Destroy(this.gameObject);
-        }
+        Destroy(this.gameObject);
     }
 }

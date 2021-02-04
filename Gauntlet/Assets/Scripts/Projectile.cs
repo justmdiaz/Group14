@@ -22,7 +22,7 @@ public class Projectile : MonoBehaviour
            GameObject tempProjectileHandler;
            tempProjectileHandler = Instantiate(prefabToSpawn, projectileEmitter.transform.position, projectileEmitter.transform.rotation) as GameObject;
 
-            tempProjectileHandler.transform.Rotate(Vector3.left * 90);
+            tempProjectileHandler.transform.Rotate(Vector3.left * 180);                                                                 //May have to change value of 180 to make projectile face correct direction
 
             Rigidbody tempRigidbody;
             tempRigidbody = tempProjectileHandler.GetComponent<Rigidbody>();

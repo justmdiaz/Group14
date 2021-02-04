@@ -1,17 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform targetObject;
-    private Vector3 initalOffset;
-    private Vector3 cameraPosition;
+    Transform player;
+    private CinemachineVirtualCamera vcam;
+
+    void Start()
+    {
+        vcam = GetComponent<CinemachineVirtualCamera>();
+        player = GameObject.FindWithTag("Player").transform;
+    }
     
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        cameraPosition = targetObject.position + initalOffset;
-        transform.position = cameraPosition;
+        vcam.Follow = player;
+        vcam.LookAt = player;
+        
     }
 }
