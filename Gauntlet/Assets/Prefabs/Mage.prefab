@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416477433}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.27900004, z: -0.419}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: -0.27900004, z: -0.369}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7083579724334577764}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &882178289436776702
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +609,7 @@ Transform:
   m_GameObject: {fileID: 7567805038038311646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.07, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: -1.3}
   m_Children:
   - {fileID: 5351203964824459417}
   - {fileID: 3682194073115542081}
@@ -678,7 +678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileEmitter: {fileID: 416477433}
-  prefabToSpawn: {fileID: 644830845426738122, guid: 80a315c22adac504e90dfd831815c970, type: 3}
+  prefabToSpawn: {fileID: 1772250035661164312, guid: c1894cdda8dcd634686ef79bb7e2d1ee, type: 3}
   projectileSpeed: 100
 --- !u!1 &7855838983605332521
 GameObject:
