@@ -3,12 +3,7 @@ guid: 17672d5090b8511498fefed8d1bded35
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: ChestUV
-    second: {fileID: 2800000, guid: a6cccc6ced1a89940a3926dd2680c15b, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
